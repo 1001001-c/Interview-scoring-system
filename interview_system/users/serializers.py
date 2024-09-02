@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import UserProfile
 
-class UserProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = UserProfile
-        fields = ['id', 'username', 'role']
+from rest_framework import serializers
+
+class FileUploadSerializer(serializers.Serializer):
+    examiners_file = serializers.FileField()
+    candidates_file = serializers.FileField()
